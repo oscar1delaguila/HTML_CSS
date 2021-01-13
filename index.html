@@ -1,0 +1,207 @@
+# HTML_CSS
+Asignatura HTML y CSS
+
+
+
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+
+
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<meta name="author" content="Oscar del Aguila">
+	
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+
+	<title>
+		
+
+	</title>
+
+
+</head>
+
+
+<body>
+
+
+
+
+	<header id="cabecera">
+			
+				<div>
+					
+					<div>
+						<a href="index.html">
+						<img src="img/oscarsclub-isologo.png" class="logo-oscars-club" alt="Logo Oscars Club">
+						</a>
+					</div>
+					<div><a href="index.html"><b>oscars</b><i>club</i></a></div>
+					
+				</div>
+				<nav>
+					<ul>                                       
+						<li><a href="clubes-tematicos.html"  >CLUBES TEMÁTICOS</a></li>
+						<li><a href="sesiones-2020.html" >SESIONES 2020</a></li>
+					</ul>
+				</nav>
+
+				<div>
+					<a href="certificado.html" class="activado" ><input type="button" name="inicia-sesion" value="Iniciar Sesión" class="boton"></a>
+				</div>
+
+
+	</header>
+	
+	<main>
+
+		<section >
+
+			<h1>¿Qué es Oscars Club?</h1>
+
+			<p>Oscars Club organiza clubes virtuales de cine de diversos géneros y en diferentes lenguas, para los amantes del cine que quieran compartir reflexiones y debatir sobre las películas que les interesan sin necesidad de tener que ir a un espacio físico.</p>
+
+		</section>
+
+
+		<section  >
+
+			<h1>¿Cómo funciona?</h1>
+
+			<div class="columns-flex ">
+
+				<div>
+					<figure>
+				
+						<img src="img/howto-register.png" alt="Edwin Denby con un megáfono enorme en el campo de juego, 1922 " class="icono-como-funciona">
+
+						<figcaption class="alineado-derecha pie-denby">
+						    <p>Regístrate</p>
+						</figcaption>
+
+					</figure>
+				</div>
+
+				<div>
+					<figure>
+				
+						<img src="img/howto-club.png" alt="Edwin Denby con un megáfono enorme en el campo de juego, 1922 " class="icono-como-funciona" >
+
+						<figcaption class="alineado-derecha pie-denby">
+						    <p>Inscríbete en un club</p>
+						</figcaption>
+
+					</figure>
+				</div>
+				<div>
+					<figure>
+				
+						<img src="img/howto-film.png" alt="Edwin Denby con un megáfono enorme en el campo de juego, 1922 " class="icono-como-funciona" >
+
+						<figcaption class="alineado-derecha pie-denby">
+						    <p>Elige una película</p>
+						</figcaption>
+
+					</figure>
+				</div>
+				<div>
+					<figure>
+				
+						<img src="img/howto-speech.png" alt="Edwin Denby con un megáfono enorme en el campo de juego, 1922 " class="icono-como-funciona" >
+
+						<figcaption class="alineado-derecha pie-denby">
+						    <p>Disfruta del debate</p>
+						</figcaption>
+
+					</figure>
+				</div>
+
+			</div>
+
+		</section>
+
+		<section>
+
+			<h1><strong>Únete al club</strong></h1>
+
+			<div class="columns-flex2">
+
+				<div>
+
+					<h1>Estamos mirando tu próxima película preferida.</h1> 
+					<h1>¿Te lo vas a perder?</h1>
+
+				</div>
+
+				<form>
+
+					<fieldset>
+
+	       				<!-- Formulario de registro [todos los campos de este formulario son obligatorios] -->
+
+							<div>
+								<input id="username" type="text" required name="username" maxlength="128" minlength="2" 
+							       title="Admite letras, apóstrofes y guiones" pattern="[a-zàáèéíòóúüïA-ZÀÁÈÉÍÒÓÚÜÏ\u00f1\u00d1\u002d\u0027\u0020\u00c7\u00e7]*" placeholder="Nombre">
+							</div>
+							
+							<div>
+	  						<input id="username" type="text" required name="username" maxlength="128" minlength="2" 
+	  						       title="Admite letras, apóstrofes y guiones" pattern="[a-zàáèéíòóúüïA-ZÀÁÈÉÍÒÓÚÜÏ\u00f1\u00d1\u002d\u0027\u0020\u00c7\u00e7]*" placeholder="Correo electrónico">
+	  						</div>
+
+							<div>
+							<input id="username" type="text" required name="username" maxlength="128" minlength="2" 
+	  						       title="Admite letras, apóstrofes y guiones" pattern="[a-zàáèéíòóúüïA-ZÀÁÈÉÍÒÓÚÜÏ\u00f1\u00d1\u002d\u0027\u0020\u00c7\u00e7]*" placeholder="Contraseña">
+							</div>	
+
+
+						<div><p>INFORMACIÓN SOBRE PROTECCIÓN DE DATOS DE OSCARS CLUB. Finalidades: recogida de datos para la inscripción como socio del interesado.Legitimación: Consentimiento del interesado. Destinatarios: No están previstas cesiones de datos a terceros, salvo obligación legal. Derechos: Puede retirar su consentimiento en cualquier momento, así como acceder, rectificar, suprimir sus datos y otros derechos dirigiéndose a oscarsclub@oscarsclub.org. Información Adicional: Puede ampliar la información en el enlace deAviso Legal y Política de privacidad.
+						</p></div>
+						<!-- [Aviso legal y Política de privacidad son enlaces vacíos] -->
+
+						<div><input type="checkbox" name="politica-privacidad"><label for="politica-privacidad">He leído y acepto la política de privacidad</label></div>
+
+						<div><a href="" class="" ><input type="button" name="inicia-sesion" value="REGISTRARSE" class="boton"></a></div>
+
+					</fieldset>
+				</form>
+
+
+
+			</div>
+
+		</section>
+
+	</main>
+	
+	<footer>
+		
+		<div class="wrapper">
+			 <div>Sobre nosotros . Aviso Legal . Política de privacidad</div>
+		     <div>Facebook . Twitter . Youtube</div>
+		</div>
+
+
+		<div>
+			<p>2020 &copy; Oscar del Aguila Giménez</p>
+			<p>Iconos flaticon.com</p>
+			<p>Imágenes unsplash.com</p>
+		</div>
+
+		<a href="#cabecera"><div class="desplazador-arriba">&xwedge;</div></a>
+
+	</footer>	
+
+
+
+</body>
+</html>
+
+
