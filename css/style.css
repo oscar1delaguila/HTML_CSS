@@ -1,0 +1,795 @@
+
+html {
+
+	margin: 0 ;
+	padding: 0;
+	font-family: 'Noto Serif', serif;
+
+}
+
+body {
+
+	background-color: #e8e8e8;
+	margin:0 auto;
+	width: 100%;
+	padding:0; 
+}
+
+p {
+
+	color: #1c1c1c;
+
+}
+
+div.desplazador-arriba {
+
+	position: fixed;
+	top:90vh;
+	right:3vw;
+	z-index: 100;
+	color:white;
+	font-size: 3rem;
+
+}
+
+
+main {
+
+	width: 70%;
+	/*border: 1px solid #9b1700; */
+	margin: 0 auto;
+	padding: 0;
+
+}
+
+
+header {
+
+
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 3%;
+	
+}
+
+
+/*logo y oscarsclub*/
+header div {
+
+	flex: 1;
+	vertical-align: middle;
+	text-align: left;
+	padding-left: 2%;
+	font-size: 2rem;
+
+}
+
+/* Convertimos en linea el div de la imagen.*/
+header > div > div{
+
+	display: inline;
+	
+}
+
+/*accedemos al texto club*/
+header > div  b {
+
+	color: black;
+
+}
+
+
+/*elemento de navegacion*/
+header div + nav {
+
+	flex: 5 ;
+	text-align: center;
+	font-weight: 700;
+	font-family: 'Open Sans', sans-serif;
+
+
+}
+
+
+/* el boton */
+header div + nav + div {
+
+	flex: 1;
+	text-align: right;
+	padding-right: 2%; 
+
+}
+
+
+h1 {
+
+	margin-bottom: 2%;
+
+}
+
+
+nav ul li {
+
+	/*con el inline block respetamos los margenes y propiedades*/
+	display: inline;
+	padding-left: 2%;
+	padding-right: 2%; 
+
+}
+
+
+section > p {
+
+	width: 50%;
+	margin: 0 auto;
+
+}
+
+section {
+
+	text-align: center;
+	margin-bottom: 5%; 
+
+}
+
+
+a {
+
+	text-decoration: none;
+	color:#9b1700;
+}
+
+
+nav li a {
+
+	color: rgb(28, 28, 28);
+}
+
+nav li a:hover {
+
+	color: rgba(28, 28, 28,0.5);
+}
+
+
+.activado, nav li a:active {
+
+	font-style: italic;
+	font-weight: 700;
+	color: rgb(28,28,28);
+
+}
+
+
+div.columns-flex {
+
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+
+}
+
+
+div.columns-flex div{
+
+	flex:250px;
+	text-align: center;
+
+
+}
+
+
+div.columns-flex div h1 {
+
+	/*Para las tres lineas de texto de index.html*/
+	text-align: left;
+
+}
+
+
+
+.icono-como-funciona {
+
+	width: 80%;
+
+}
+
+
+div.columns-flex2 {
+
+	display: flex;
+
+}
+
+
+div.columns-flex2 form, fieldset  {
+
+	width: 100%;
+	flex: 0.8;
+	border: 0px;
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+div.columns-flex2 div {
+
+	flex: 1.2;
+	text-align: left;
+
+}
+
+
+
+div.columns-flex2 fieldset div {
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	text-align: left;
+	width: 100%;
+	
+}
+
+
+
+input[type="text"] {
+
+
+	box-sizing: border-box; /* al padding y el border no afecta al tamañó de la caja */
+	border: 1px solid black;
+	border-left: 1px solid grey;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	width: 100%;
+
+}
+
+
+
+
+footer {
+
+	font-family: 'Open Sans', sans-serif;
+	margin:0;
+	padding:0;
+
+	background-color: #433A44;
+	color: white;
+	
+}
+
+
+footer div+div {
+
+	padding-left: 2%;
+	padding-right: 2%;
+
+
+}
+
+footer div div {
+
+	float: left;
+	padding-left: 2%;
+	
+	
+
+}
+
+footer div div+div{
+
+	float: right;
+	padding-right: 2%;
+}
+
+
+/* Para limpiar la caja y que no se solapen contenidos con los parrafos de abajo*/
+footer div.wrapper {
+
+	display: flow-root;
+	padding-top: 2%;
+	margin-bottom: 3%;
+	
+
+}
+
+
+.boton {
+
+	background-color: #9b1700;
+	color:white;
+	border: 0;
+	border-radius: 5px;
+	padding: 2% 4% 2% 4%;
+	font-size: 1.2rem;
+}
+
+.boton:hover {
+
+	background-color: rgb(28, 28, 28);
+
+}
+
+
+
+
+/******************************************************************** clubes tematicos **********************************************************/
+
+
+
+/*centramos titulo*/
+article h1 {
+
+	text-align: center;
+}
+
+article div.container {
+
+	
+	display: grid;
+	/*grid-template-columns: 1fr 1fr 1fr; */
+	grid-template-columns: repeat(3, minmax(120px, 1fr));
+	grid-gap: 30px;
+	/*grid-row-gap: 5%;*/
+
+}
+
+
+
+article div.container img {
+
+	/*definimos el 100% para que la imagen no tenga su tamño original sino que ocupe el 100% de la celda de la parrilla*/
+	width: 100%;
+
+}
+
+
+
+article div.container figure {
+
+	/*definimos el 100% para que la imagen no tenga su tamño original sino que ocupe el 100% de la celda de la parrilla*/
+	margin: 0;
+	width: 100%;
+	
+}
+
+
+.titulo-tematico:before {
+
+	content: "····   ";
+	color:#9b1700;
+	font-weight: bolder;
+
+}
+
+
+/************************************************************************************sesiones 2020 ***************************************************/
+
+
+article section div h2 {
+
+	border: 1px solid #9b1700;
+
+}
+
+aside ul {
+
+	list-style-type: none;
+	padding: unset;
+
+}
+
+article section h1 {
+
+	text-align: left;
+}
+
+
+
+article section div.container img {
+
+	/*subimos la imagen para tapar el hueco que deja el caption de la imagen el moverla hacia abajo.*/
+	margin-top: -40px;
+
+}
+
+
+
+.section-sesiones-2020 h1 {
+
+	text-align: center;
+}
+
+.section-sesiones-2020{
+
+	
+	border-bottom: 4px dotted #9b1700;
+	text-align: left;
+	margin-bottom: 2%; 
+	
+}
+
+.section-sesiones-2020 p{
+
+	margin-bottom: 2%;
+
+}
+
+div.outer-container {
+
+	display: flex;
+	/* de esta manera el aside se mantiene arriba y las peliculas abajo*/
+	flex-wrap: wrap; 
+	justify-content: space-around;
+	
+}
+
+div.outer-container aside {
+
+	text-align: left;
+	flex: 1 ;
+
+}
+
+
+
+div.outer-container div {
+
+	flex: 4;
+	text-align: center;
+
+}
+
+
+article div.container div {
+
+	margin-bottom: 10%;
+
+}
+
+
+article section div.container figure {
+
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	margin-bottom: 20%;
+}
+
+article section div.container figure img {
+
+	width: 100%;
+
+
+}
+
+
+
+/* el elemento lo ponemos antes del elemento img para poder calcular la posición relativa al padre.*/
+article section div.container figure  figcaption {
+	
+	color:#9b1700;
+	top: calc(100% - 40px);
+	/*posicion relativa, en este caso es la del padre que es el elemento figure*/
+	position: relative;
+	padding-bottom: 20px;
+	
+}
+
+
+
+.titulo-sesiones:before {
+
+	content: "·····   ";
+	color:#9b1700;
+	font-weight: bolder;
+
+}
+.titulo-sesiones {
+
+
+	text-align: left;
+	
+}
+/******************************************************************************detalle sesion ************************************************************/
+
+section.wrapper-detalle {
+
+	display: flex;
+	flex-wrap: wrap;
+
+
+
+}
+
+section.wrapper-detalle aside {
+
+	flex: 1.5;
+	text-align: left;
+	padding-right:  2%;
+
+}
+
+section.wrapper-detalle article {
+
+	flex: 2;
+	text-align: justify;
+	text-align: left;
+	
+}
+
+section.wrapper-detalle article h1 {
+
+	text-align: left;
+	
+}
+
+
+section.wrapper-detalle article div:last-child p {
+
+	/*respetamos propiedades de la regla de abajo al poner inline-block*/
+	display: inline-block;
+	
+}
+
+section.wrapper-detalle article div:last-child p::first-letter, section.wrapper-detalle article div span {
+
+	font-size: 1.4rem;
+
+}
+
+
+div.trailer-pelicula iframe{
+
+	width: 100%;
+	height: 500px;
+
+}
+
+.imagen-Sergio-Pablos{
+
+		float: left;
+		border-radius: 100px;
+		/*display: flow-root;*/
+
+}
+
+.div-imagen-Sergio-Pablos p{
+
+	border-radius: 100px;
+
+}
+
+dt {
+
+	width: 100%;
+	border-bottom: 1px solid grey;
+	
+}
+
+
+dd, dl {
+
+	line-height: 1.2rem;
+}
+
+dd {
+
+	padding-bottom: 3%;
+}
+
+
+/****************************************** hilo de Ariadna*************************************/
+
+
+ul.breadcrumb {
+
+  margin-top: 4%;
+  padding: unset;
+  list-style: none;
+  
+}
+
+
+
+ul.breadcrumb li {
+  
+  display: inline;
+
+}
+
+ul.breadcrumb li+li:before {
+
+  padding: 7px;
+  color: inherit;
+  content: "/ ";
+}
+
+
+ul.breadcrumb li a {
+  
+  /* color heredado */
+  color:inherit;
+
+}
+
+
+ul.breadcrumb li a:hover, ul.breadcrumb li:last-child a {
+
+  color: rgba(28, 28, 28,0.5) ;
+
+}
+
+
+@media screen and (max-width: 968px) { 
+
+
+	
+	main {
+
+		margin: 0 auto;
+		width: 90%;
+
+	}
+
+
+	/*logo y oscarsclub*/
+	header div {
+
+		order: 1;
+		font-size: 1.5rem;
+		flex: 320px; 
+		text-align: center;
+
+	}
+
+	/*elemento de navegacion*/
+	header div + nav {
+
+		order: 2;
+		font-size: 1rem;
+		flex: 320px;
+		text-align: center;
+
+
+	}
+
+	nav ul li {
+
+		display:block;
+
+	}
+
+
+	/* el boton */
+	header div + nav + div {
+
+		order: 0;
+		flex:  320px;
+		text-align: center;
+		margin-bottom: 1%;
+
+	}
+
+	div.column-flex {
+
+		display: flex;
+
+	}
+
+		
+	fieldset {
+
+		flex: 1;	
+	}
+
+
+	div.columns-flex2 {
+
+		display: flex;
+		flex-wrap: wrap;
+
+	}
+
+
+	div.columns-flex2 form  {
+
+		flex: 100%;
+		margin: 0;
+		padding: 0;
+		font-family: 'Open Sans', sans-serif;
+
+	}
+
+
+	div.columns-flex2 div {
+
+		flex: 100%;
+
+	}
+
+	article div.container {
+
+		grid-template-columns: repeat(1, minmax(320px, 1fr));
+		
+
+	}
+
+	div.outer-container {
+
+		display: flex; 
+		/* de esta manera el aside se mantiene arriba y las peliculas abajo*/
+		flex-wrap: wrap; 
+
+		
+	}
+
+	div.outer-container aside {
+
+		text-align: left;
+		flex: 100%;
+
+	}
+
+
+
+	div.outer-container div {
+
+		flex: 100%;
+
+	}
+
+	/**/
+	article div.container div {
+
+		width: 80%;
+		margin: 0 auto 10% auto;
+	}
+
+	section p {
+
+		width: 100%;
+
+	}
+
+	section.wrapper-detalle aside {
+
+		flex: 100%;
+		text-align: left;
+		
+	}
+
+	section.wrapper-detalle article {
+
+		flex: 100%;
+		text-align: left; 		
+	}
+
+	section.wrapper-detalle article h1 {
+
+		text-align: left;
+
+	}
+
+	section.wrapper-detalle article div:last-child p::first-letter, section.wrapper-detalle article div span {
+
+		font-size: 1.4rem;
+
+	}
+
+
+
+	section.wrapper-detalle article div:last-child p {
+
+		/*respetamos propiedades de la regla de abajo al poner inline-block*/
+		display: inline;
+		
+	}
+
+
+
+}
+
