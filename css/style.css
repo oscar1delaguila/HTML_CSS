@@ -1,31 +1,34 @@
 
-html {
-
-	margin: 0 ;
-	padding: 0;
-	font-family: 'Noto Serif', serif;
-
-}
-
 body {
 
-	background-color: #e8e8e8;
+	/*google fonts*/
+	font-family: 'Noto Serif', serif;
+
+	/*contenido centrado*/
 	margin:0 auto;
 	width: 100%;
-	padding:0; 
+	background-color: #e8e8e8;
 }
 
+
+/*color de los textos*/
 p {
 
 	color: #1c1c1c;
 
 }
 
+
+
 div.desplazador-arriba {
 
 	position: fixed;
-	top:90vh;
+
+	/* posicion desde calculada desde el elmento padre */
+	bottom:5vh;
 	right:3vw;
+
+	/*sobresaltamos el enlace para que siempre sea visible */
 	z-index: 100;
 	color:white;
 	font-size: 3rem;
@@ -36,19 +39,20 @@ div.desplazador-arriba {
 main {
 
 	width: 70%;
-	/*border: 1px solid #9b1700; */
 	margin: 0 auto;
-	padding: 0;
 
 }
 
 
 header {
 
-
+	/* contenedor con hijos flexibles */
 	display: flex;
+
+	/* cuando no caben se disponen en la linea de abajo */
 	flex-wrap: wrap;
 	padding-top: 3%;
+	
 	
 }
 
@@ -57,18 +61,23 @@ header {
 header div {
 
 	flex: 1;
+
+	/*alineación vertical*/
 	vertical-align: middle;
 	text-align: left;
 	padding-left: 2%;
-	font-size: 2rem;
+
+	/* tamaño de fuente que varia segun el tamaño de la ventana */
+	font-size: 2.4vw;
+	
 
 }
 
-/* Convertimos en linea el div de la imagen.*/
-header > div > div{
+/* Convertimos en 'inline' el div de la imagen de la cabecera para que se vea junto con el texto.*/
+header > div > div {
 
 	display: inline;
-	
+
 }
 
 /*accedemos al texto club*/
@@ -82,16 +91,20 @@ header > div  b {
 /*elemento de navegacion*/
 header div + nav {
 
-	flex: 5 ;
+	/* proporción del ancho de la columna de los elementos del menú de la cabecera*/
+	flex: 1.6;
 	text-align: center;
 	font-weight: 700;
 	font-family: 'Open Sans', sans-serif;
+
+	/* tamaño de la fuente en relación con el ancho de la ventana*/
+	font-size: 1.5vw;
 
 
 }
 
 
-/* el boton */
+/* el boton de la cabecera*/
 header div + nav + div {
 
 	flex: 1;
@@ -102,15 +115,13 @@ header div + nav + div {
 
 
 h1 {
-
 	margin-bottom: 2%;
-
 }
 
 
 nav ul li {
 
-	/*con el inline block respetamos los margenes y propiedades*/
+	/* lista en linea del menu de la cabecera */
 	display: inline;
 	padding-left: 2%;
 	padding-right: 2%; 
@@ -118,9 +129,9 @@ nav ul li {
 }
 
 
-section > p {
+.seccion-centrada > p {
 
-	width: 50%;
+	width: 60%;
 	margin: 0 auto;
 
 }
@@ -132,13 +143,13 @@ section {
 
 }
 
+/* Enlaces */
 
 a {
 
 	text-decoration: none;
 	color:#9b1700;
 }
-
 
 nav li a {
 
@@ -160,21 +171,26 @@ nav li a:hover {
 }
 
 
+
+/******************************************************************************************************* index.html *********************************************************************/
+
+
+
+/* elemento padre con flexbox */
 div.columns-flex {
 
 	display: flex;
-	flex-wrap: wrap;
 	text-align: center;
 
 }
 
-
+/* Elementos hijo*/
 div.columns-flex div{
 
-	flex:250px;
+	/* proporcion igual para cada columna hijo */
+	flex: 1; 
 	text-align: center;
-
-
+	
 }
 
 
@@ -187,13 +203,15 @@ div.columns-flex div h1 {
 
 
 
-.icono-como-funciona {
+img.icono-como-funciona {
 
-	width: 80%;
+	/* para qeu no ocupe todo el ancho del elemento hijo */
+	width: 80%; 
 
 }
 
 
+/* para la segunda seccion de index.html definimos el elemento como flexbox */
 div.columns-flex2 {
 
 	display: flex;
@@ -204,7 +222,7 @@ div.columns-flex2 {
 div.columns-flex2 form, fieldset  {
 
 	width: 100%;
-	flex: 0.8;
+	flex: 0.8;  /* esta propiedad solo se aplica a el --form-- */
 	border: 0px;
 	margin: 0;
 	padding: 0;
@@ -214,13 +232,15 @@ div.columns-flex2 form, fieldset  {
 
 div.columns-flex2 div {
 
+
+	/* proporcion de al segunda columna de la sección */
 	flex: 1.2;
 	text-align: left;
 
 }
 
 
-
+/* selector contenedor de los inputs*/
 div.columns-flex2 fieldset div {
 
 	padding-top: 10px;
@@ -233,8 +253,8 @@ div.columns-flex2 fieldset div {
 }
 
 
-
-input[type="text"] {
+/*controles*/
+input[type="text"], input[type="password"], input[type="email"] {
 
 
 	box-sizing: border-box; /* al padding y el border no afecta al tamañó de la caja */
@@ -248,55 +268,85 @@ input[type="text"] {
 }
 
 
+/*********************************************************************************pie de pagina **************************************************************/
 
+/* footer flexbox */
+body footer {
 
-footer {
-
+	display: flex;
+	/* si los elementos hijos no caben pasan a la siguiente linea */
+	flex-wrap: wrap;
 	font-family: 'Open Sans', sans-serif;
-	margin:0;
-	padding:0;
-
 	background-color: #433A44;
 	color: white;
+	padding: 4% 2% 0% 2%;
+
+	/*al ancho hay que restarle los padding del 2% para tener un ancho del 100% */
+	width: 96%;
+
 	
 }
 
+footer a {
 
-footer div+div {
+	color:white;
 
-	padding-left: 2%;
-	padding-right: 2%;
+} 
 
+footer a:hover {
 
-}
-
-footer div div {
-
-	float: left;
-	padding-left: 2%;
-	
-	
+	color: #9b1700;
 
 }
 
-footer div div+div{
 
-	float: right;
-	padding-right: 2%;
-}
+/* selector primer hijo del footer flexbox */
+footer ul {
 
-
-/* Para limpiar la caja y que no se solapen contenidos con los parrafos de abajo*/
-footer div.wrapper {
-
-	display: flow-root;
-	padding-top: 2%;
+	flex: 1;
+	margin:unset;
+	padding: unset;
 	margin-bottom: 3%;
-	
+	list-style: none;
 
 }
 
 
+footer ul li {
+
+	display: inline;
+	padding: 0.3% 0% 0.3% 0%;
+	
+
+}
+
+/* segundo hijo del footer flexbox */
+footer ul + ul{
+
+	text-align: right;
+	flex: 1;
+	
+}
+
+
+/* tercer hijo del footer flexbox */
+footer ul + ul + ul {
+
+	/* para que lo ponga debajo (proporción el doble y ancho 100%) */
+	flex: 2 100%;
+	text-align: left;
+	
+}
+
+/* disposición uno debajo del otro */
+footer ul + ul + ul li {
+
+	display: block;
+
+}
+
+
+/* clase para los botones de la web */
 .boton {
 
 	background-color: #9b1700;
@@ -304,7 +354,8 @@ footer div.wrapper {
 	border: 0;
 	border-radius: 5px;
 	padding: 2% 4% 2% 4%;
-	font-size: 1.2rem;
+	font-size: 1.3vw;
+	
 }
 
 .boton:hover {
@@ -330,10 +381,14 @@ article div.container {
 
 	
 	display: grid;
-	/*grid-template-columns: 1fr 1fr 1fr; */
+
+	/*cuadricula flexible: repetimos hasta qeu sea posible 3 columnas con minimo ancho cada una en pixeles y
+	y hasta ocupar el ancho posible */
 	grid-template-columns: repeat(3, minmax(120px, 1fr));
+
+	/*separación entre imagen e imagen también en sesiones 2020 */
 	grid-gap: 30px;
-	/*grid-row-gap: 5%;*/
+	
 
 }
 
@@ -341,8 +396,8 @@ article div.container {
 
 article div.container img {
 
-	/*definimos el 100% para que la imagen no tenga su tamño original sino que ocupe el 100% de la celda de la parrilla*/
-	width: 100%;
+	/*definimos el 100% para que la imagen ocupe el 100% de la celda de la parrilla*/
+	width: 100%; 
 
 }
 
@@ -350,13 +405,11 @@ article div.container img {
 
 article div.container figure {
 
-	/*definimos el 100% para que la imagen no tenga su tamño original sino que ocupe el 100% de la celda de la parrilla*/
 	margin: 0;
-	width: 100%;
-	
+
 }
 
-
+/* antes del elemento titulo temático escribimos los puntos*/
 .titulo-tematico:before {
 
 	content: "····   ";
@@ -369,18 +422,29 @@ article div.container figure {
 /************************************************************************************sesiones 2020 ***************************************************/
 
 
-article section div h2 {
+/* menu temático de sesiones 2020 */
+aside ul li a{
 
-	border: 1px solid #9b1700;
+	font-family: 'Open Sans', sans-serif;
+	color:rgb(28, 28, 28);
 
 }
+
+aside ul li a:hover {
+
+	color: rgba(28, 28, 28,0.5);
+}
+
 
 aside ul {
 
 	list-style-type: none;
+
+	/* valores iniciales anulados */
 	padding: unset;
 
 }
+
 
 article section h1 {
 
@@ -391,7 +455,7 @@ article section h1 {
 
 article section div.container img {
 
-	/*subimos la imagen para tapar el hueco que deja el caption de la imagen el moverla hacia abajo.*/
+	/*subimos la imagen 40px */
 	margin-top: -40px;
 
 }
@@ -405,7 +469,7 @@ article section div.container img {
 
 .section-sesiones-2020{
 
-	
+	/* linea de puntos*/
 	border-bottom: 4px dotted #9b1700;
 	text-align: left;
 	margin-bottom: 2%; 
@@ -421,9 +485,6 @@ article section div.container img {
 div.outer-container {
 
 	display: flex;
-	/* de esta manera el aside se mantiene arriba y las peliculas abajo*/
-	flex-wrap: wrap; 
-	justify-content: space-around;
 	
 }
 
@@ -438,6 +499,7 @@ div.outer-container aside {
 
 div.outer-container div {
 
+	/* proporcion 4 veces mas que su hermano*/
 	flex: 4;
 	text-align: center;
 
@@ -453,29 +515,45 @@ article div.container div {
 
 article section div.container figure {
 
+	/*ocupa todo el ancho del DIV que este ultimo corresponde al elemento hijo del elemento qwue contiene la clase container*/
 	width: 100%;
 	height: 100%;
 	background-color: white;
+
+	/*margen con el DIV que es de contenedor del figure */
 	margin-bottom: 20%;
+
+}
+
+article section div.container figure:hover {
+
+	opacity: 0.5;
+
 }
 
 article section div.container figure img {
 
+	/*ocupa todo el ancho de su elemento padre figure */
 	width: 100%;
 
 
 }
 
 
-
-/* el elemento lo ponemos antes del elemento img para poder calcular la posición relativa al padre.*/
+/* el elemento figcaption lo ponemos antes del elemento img para poder calcular la posición relativa al padre.*/
 article section div.container figure  figcaption {
 	
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1vw;
 	color:#9b1700;
+	text-align: left;
 	top: calc(100% - 40px);
+		
 	/*posicion relativa, en este caso es la del padre que es el elemento figure*/
 	position: relative;
-	padding-bottom: 20px;
+	padding-top: 1vh;
+	padding-left: 0.3vw;
+	font-weight: bolder;
 	
 }
 
@@ -483,6 +561,8 @@ article section div.container figure  figcaption {
 
 .titulo-sesiones:before {
 
+	margin-left: -2%;
+	margin-right: 1.5%;
 	content: "·····   ";
 	color:#9b1700;
 	font-weight: bolder;
@@ -490,22 +570,30 @@ article section div.container figure  figcaption {
 }
 .titulo-sesiones {
 
-
 	text-align: left;
 	
 }
 /******************************************************************************detalle sesion ************************************************************/
 
-section.wrapper-detalle {
+
+article aside h1 {
+
+	text-align: left;
+
+}
+
+
+/* elemento flexbox */
+article.wrapper-detalle {
+
 
 	display: flex;
 	flex-wrap: wrap;
 
-
-
 }
 
-section.wrapper-detalle aside {
+/* proporcion 1.5 del ancho */
+article.wrapper-detalle aside {
 
 	flex: 1.5;
 	text-align: left;
@@ -513,55 +601,69 @@ section.wrapper-detalle aside {
 
 }
 
-section.wrapper-detalle article {
+/*proporcion 2 del ancho */
+article.wrapper-detalle section {
 
 	flex: 2;
 	text-align: justify;
+		
+}
+
+article.wrapper-detalle section h1 {
+
 	text-align: left;
 	
 }
 
-section.wrapper-detalle article h1 {
 
-	text-align: left;
-	
-}
+	/*respetamos propiedades de la siguiente regla al poner inline-block*/
+article.wrapper-detalle section div:last-child p {
 
-
-section.wrapper-detalle article div:last-child p {
-
-	/*respetamos propiedades de la regla de abajo al poner inline-block*/
 	display: inline-block;
 	
 }
 
-section.wrapper-detalle article div:last-child p::first-letter, section.wrapper-detalle article div span {
+article.wrapper-detalle section div:last-child p::first-letter, article.wrapper-detalle section div span {
 
 	font-size: 1.4rem;
 
 }
 
 
-div.trailer-pelicula iframe{
+iframe {
 
 	width: 100%;
-	height: 500px;
+	height: 100%;
 
+}
+
+
+/* contenedor del iframe */
+div.trailer-pelicula {
+
+   width: 100%;
+   height: 45vh;
 }
 
 .imagen-Sergio-Pablos{
 
 		float: left;
+
+		/*imagen redondeada*/
 		border-radius: 100px;
-		/*display: flow-root;*/
+		
+}
+
+div.div-imagen-Sergio-Pablos img {
+
+	/* el texto respeta la forma de la foto redondeada*/
+	/* Da error en el validador */
+	shape-outside: circle();
+	margin-right: 2%;
 
 }
 
-.div-imagen-Sergio-Pablos p{
-
-	border-radius: 100px;
-
-}
+/* lista de descripcion*/
 
 dt {
 
@@ -585,6 +687,14 @@ dd {
 /****************************************** hilo de Ariadna*************************************/
 
 
+/* Hemos definido un valor en el tercer elemento del hilo de Ariadna para facilitar el acceso, no solo
+ para cambiar el color, sino como futuras vias de desarrollo. */
+ul.breadcrumb li[value="100"] {
+
+	color: rgba(28, 28, 28,0.5);
+
+}
+
 ul.breadcrumb {
 
   margin-top: 4%;
@@ -598,13 +708,13 @@ ul.breadcrumb {
 ul.breadcrumb li {
   
   display: inline;
+  font-family: 'Open Sans', sans-serif;
 
 }
 
 ul.breadcrumb li+li:before {
 
   padding: 7px;
-  color: inherit;
   content: "/ ";
 }
 
@@ -617,20 +727,41 @@ ul.breadcrumb li a {
 }
 
 
-ul.breadcrumb li a:hover, ul.breadcrumb li:last-child a {
 
-  color: rgba(28, 28, 28,0.5) ;
+/******************************************************VALIDACION************************************************/
+
+/* solo cuando el control tiene el foco aplicamos estilos de validación para qeu no sea molesto a la vista
+ una vez rellenado el campo */
+input:valid:focus {
+	
+	background-color: rgb(189,236,182,0.5); /*en verde con opacidad*/
+	
 
 }
 
+/* solo cuando el control tiene el foco aplicamos estilos de validación para qeu no sea molesto a la vista
+ una vez rellenado el campo */
 
-@media screen and (max-width: 968px) { 
+input:invalid:focus {
+
+	background-color: rgb(256,0,0,0.1); /*en rojo con opacidad*/
+	
+}
+
+
+/******************************************************************************************************************/
+/*** cuando la resolución del dispositivo como máximo es de 768px de ancho se aplican estas reglas de estilo.
+*******************************************************************************************************************/
+
+@media screen and (max-width: 768px) { 
 
 
 	
 	main {
 
 		margin: 0 auto;
+
+		/*aumentamos el ancho respecto dispositivos grandes.*/
 		width: 90%;
 
 	}
@@ -639,24 +770,30 @@ ul.breadcrumb li a:hover, ul.breadcrumb li:last-child a {
 	/*logo y oscarsclub*/
 	header div {
 
+		/* el orden de visualización del elemento lo indicamos con la propiedasd -order-.*/
 		order: 1;
 		font-size: 1.5rem;
-		flex: 320px; 
+
+		/* todo el ancho del dispositivo */
+		flex: 1 100%; 
 		text-align: center;
 
 	}
 
-	/*elemento de navegacion*/
+	/*elemento de navegacion se mostrará el último de los tres elementos hijos, por defecto el order = 0; */
 	header div + nav {
+
 
 		order: 2;
 		font-size: 1rem;
-		flex: 320px;
+		flex: 1 100%;
 		text-align: center;
 
 
 	}
 
+
+	/* cambiamos la visualización del menu de navegación */
 	nav ul li {
 
 		display:block;
@@ -664,26 +801,78 @@ ul.breadcrumb li a:hover, ul.breadcrumb li:last-child a {
 	}
 
 
-	/* el boton */
+	/* el boton del menu de navegación */
 	header div + nav + div {
 
 		order: 0;
-		flex:  320px;
+		flex: 1 100%;
 		text-align: center;
 		margin-bottom: 1%;
 
 	}
 
-	div.column-flex {
+	footer {
 
 		display: flex;
+		flex-wrap: wrap;
 
+	}
+
+
+
+	footer ul {
+
+		flex: 1 100%; 
+		margin-bottom: 7%;
+
+	}
+
+	/* para la primera lista del pie insertamos un buen margen al final.*/
+	footer ul:first-child {
+
+		margin-bottom: 15%;
+
+	}
+
+
+	/*No pintamos por pantalla los puntos de entre los enlaces */
+	footer span {
+
+		display: none;
+
+	}
+
+
+	footer ul li {
+
+		display: block;
+		text-align: center;
+
+	}
+
+	/* cambiamos la visualización para que se vea una unica columna */
+	div.columns-flex {
+
+		display: block;
+		/*centramos los elementos */
+		margin: 0 auto;
+		
 	}
 
 		
 	fieldset {
 
 		flex: 1;	
+	}
+
+
+	.titulo-tematico:before {
+
+		content: "······ ";
+		margin-right: 1%;
+		color:#9b1700;
+		font-weight: bolder;
+
 	}
 
 
@@ -697,6 +886,7 @@ ul.breadcrumb li a:hover, ul.breadcrumb li:last-child a {
 
 	div.columns-flex2 form  {
 
+		/* el hijo ocupa todo el ancho disponible */
 		flex: 100%;
 		margin: 0;
 		padding: 0;
@@ -707,29 +897,25 @@ ul.breadcrumb li a:hover, ul.breadcrumb li:last-child a {
 
 	div.columns-flex2 div {
 
+		/* el hijo ocupa todo el ancho disponible */
 		flex: 100%;
 
 	}
 
 	article div.container {
 
+		/*cuadricula flexible: repetimos hasta qeu sea posible 1 columnas con minimo ancho cada una en pixeles y
+		y hasta ocupar el ancho posible  */
 		grid-template-columns: repeat(1, minmax(320px, 1fr));
-		
 
 	}
 
-	div.outer-container {
 
-		display: flex; 
-		/* de esta manera el aside se mantiene arriba y las peliculas abajo*/
-		flex-wrap: wrap; 
-
-		
-	}
 
 	div.outer-container aside {
 
 		text-align: left;
+		/* el hijo ocupa todo el ancho disponible */
 		flex: 100%;
 
 	}
@@ -738,9 +924,45 @@ ul.breadcrumb li a:hover, ul.breadcrumb li:last-child a {
 
 	div.outer-container div {
 
+
+		/* el hijo ocupa todo el ancho disponible */
 		flex: 100%;
 
 	}
+
+
+	article section div.container figure  figcaption {
+
+		font-size: 1.2rem;
+		padding-left: 2vw;
+		padding-bottom: 2%;
+
+	}
+
+
+	.section-sesiones-2020  {
+
+		border-bottom: none;
+		text-align: left;
+		
+	}
+
+	.seccion-centrada p {
+
+		width: 100%;
+
+	}
+
+	.titulo-sesiones:before {
+
+		margin-left: -1.5%;
+		margin-right: 1.5%;
+		content: "···   ";
+		color:#9b1700;
+		font-weight: bolder;
+
+	}
+
 
 	/**/
 	article div.container div {
@@ -749,47 +971,49 @@ ul.breadcrumb li a:hover, ul.breadcrumb li:last-child a {
 		margin: 0 auto 10% auto;
 	}
 
-	section p {
 
-		width: 100%;
-
-	}
-
-	section.wrapper-detalle aside {
+	article.wrapper-detalle aside {
 
 		flex: 100%;
 		text-align: left;
 		
 	}
 
-	section.wrapper-detalle article {
+	article.wrapper-detalle section {
 
 		flex: 100%;
 		text-align: left; 		
 	}
 
-	section.wrapper-detalle article h1 {
+	article.wrapper-detalle section h1 {
 
 		text-align: left;
 
 	}
 
-	section.wrapper-detalle article div:last-child p::first-letter, section.wrapper-detalle article div span {
+	/* esta regla está repetida pero porque no se puede ejecutar para dispositivos grandes
+	ya que hacemos un display:none del span. y por eso la escribimos de nuevo para dispositivos
+	pequeños. */
+	article.wrapper-detalle section div:last-child p::first-letter {
 
 		font-size: 1.4rem;
 
 	}
 
+	ul.breadcrumb {
 
-
-	section.wrapper-detalle article div:last-child p {
-
-		/*respetamos propiedades de la regla de abajo al poner inline-block*/
-		display: inline;
-		
+	  text-align: center;	
+	  margin: 10% auto 0% auto;
+	  padding: unset;
+	  list-style: none;
+	  
 	}
 
+	.boton {
 
+		font-size: 2.3vw;
+
+	}
 
 }
 
