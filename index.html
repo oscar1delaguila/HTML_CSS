@@ -1,6 +1,3 @@
-# HTML_CSS
-Asignatura HTML y CSS
-
 
 
 <!DOCTYPE html>
@@ -10,8 +7,16 @@ Asignatura HTML y CSS
 
 
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
 
+
+	<!--
+		Esta metaetiqueta informa a los navegadores de los dispositivos móviles que deben establecer el ancho de la ventana gráfica 
+		al ancho del dispositivo y escalar el documento al 100% de ese tamaño, de modo que el documento se mostrará al tamaño optimizado para 
+		esos dispositivos móviles.
+		¿Por qué esto es necesario? Porque los navegadores de los dispositivos móviles tienden a mentir sobre el ancho de su ventana gráfica.
+	-->
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="author" content="Oscar del Aguila">
 	
 
@@ -20,10 +25,7 @@ Asignatura HTML y CSS
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 		
 
-	<title>
-		
-
-	</title>
+	<title>Oscars Club cine</title>
 
 
 </head>
@@ -37,15 +39,14 @@ Asignatura HTML y CSS
 	<header id="cabecera">
 			
 				<div>
-					
 					<div>
 						<a href="index.html">
 						<img src="img/oscarsclub-isologo.png" class="logo-oscars-club" alt="Logo Oscars Club">
 						</a>
 					</div>
 					<div><a href="index.html"><b>oscars</b><i>club</i></a></div>
-					
 				</div>
+
 				<nav>
 					<ul>                                       
 						<li><a href="clubes-tematicos.html"  >CLUBES TEMÁTICOS</a></li>
@@ -54,15 +55,15 @@ Asignatura HTML y CSS
 				</nav>
 
 				<div>
-					<a href="certificado.html" class="activado" ><input type="button" name="inicia-sesion" value="Iniciar Sesión" class="boton"></a>
+					<input type="button" name="inicia-sesion" value="Iniciar Sesión" class="boton" >
 				</div>
-
-
 	</header>
+
+
 	
 	<main>
 
-		<section >
+		<section class="seccion-centrada">
 
 			<h1>¿Qué es Oscars Club?</h1>
 
@@ -80,9 +81,9 @@ Asignatura HTML y CSS
 				<div>
 					<figure>
 				
-						<img src="img/howto-register.png" alt="Edwin Denby con un megáfono enorme en el campo de juego, 1922 " class="icono-como-funciona">
+						<img src="img/howto-register.png" alt="Regístrate " class="icono-como-funciona">
 
-						<figcaption class="alineado-derecha pie-denby">
+						<figcaption class="">
 						    <p>Regístrate</p>
 						</figcaption>
 
@@ -92,9 +93,9 @@ Asignatura HTML y CSS
 				<div>
 					<figure>
 				
-						<img src="img/howto-club.png" alt="Edwin Denby con un megáfono enorme en el campo de juego, 1922 " class="icono-como-funciona" >
+						<img src="img/howto-club.png" alt="Inscríbete en un club " class="icono-como-funciona" >
 
-						<figcaption class="alineado-derecha pie-denby">
+						<figcaption class="">
 						    <p>Inscríbete en un club</p>
 						</figcaption>
 
@@ -103,9 +104,9 @@ Asignatura HTML y CSS
 				<div>
 					<figure>
 				
-						<img src="img/howto-film.png" alt="Edwin Denby con un megáfono enorme en el campo de juego, 1922 " class="icono-como-funciona" >
+						<img src="img/howto-film.png" alt="Elige una película " class="icono-como-funciona" >
 
-						<figcaption class="alineado-derecha pie-denby">
+						<figcaption class="">
 						    <p>Elige una película</p>
 						</figcaption>
 
@@ -114,9 +115,9 @@ Asignatura HTML y CSS
 				<div>
 					<figure>
 				
-						<img src="img/howto-speech.png" alt="Edwin Denby con un megáfono enorme en el campo de juego, 1922 " class="icono-como-funciona" >
+						<img src="img/howto-speech.png" alt=" Disfruta del debate" class="icono-como-funciona" >
 
-						<figcaption class="alineado-derecha pie-denby">
+						<figcaption class="">
 						    <p>Disfruta del debate</p>
 						</figcaption>
 
@@ -148,17 +149,16 @@ Asignatura HTML y CSS
 
 							<div>
 								<input id="username" type="text" required name="username" maxlength="128" minlength="2" 
-							       title="Admite letras, apóstrofes y guiones" pattern="[a-zàáèéíòóúüïA-ZÀÁÈÉÍÒÓÚÜÏ\u00f1\u00d1\u002d\u0027\u0020\u00c7\u00e7]*" placeholder="Nombre">
+							    	   title="Admite letras, apóstrofes y guiones" pattern="[a-zàáèéíòóúüïA-ZÀÁÈÉÍÒÓÚÜÏ\u00f1\u00d1\u002d\u0027\u0020\u00c7\u00e7]*" placeholder="Nombre">
 							</div>
 							
 							<div>
-	  						<input id="username" type="text" required name="username" maxlength="128" minlength="2" 
-	  						       title="Admite letras, apóstrofes y guiones" pattern="[a-zàáèéíòóúüïA-ZÀÁÈÉÍÒÓÚÜÏ\u00f1\u00d1\u002d\u0027\u0020\u00c7\u00e7]*" placeholder="Correo electrónico">
+	  							<input id="email" type="email" required name="email" maxlength="128" minlength="3" title="Escribe tu correo electrónico" placeholder="Correo electrónico">
 	  						</div>
 
 							<div>
-							<input id="username" type="text" required name="username" maxlength="128" minlength="2" 
-	  						       title="Admite letras, apóstrofes y guiones" pattern="[a-zàáèéíòóúüïA-ZÀÁÈÉÍÒÓÚÜÏ\u00f1\u00d1\u002d\u0027\u0020\u00c7\u00e7]*" placeholder="Contraseña">
+								<input id="password" type="password" required name="password" maxlength="28" minlength="5" title="Admite Números, letras, apóstrofes y guiones." 
+								   	   pattern="([a-zàáèéíòóúüïA-ZÀÁÈÉÍÒÓÚÜÏ\u00f1\u00d1\u002d\u0027\u0020\u00c7\u00e7]|[0-9])*" placeholder="Contraseña">
 							</div>	
 
 
@@ -166,14 +166,12 @@ Asignatura HTML y CSS
 						</p></div>
 						<!-- [Aviso legal y Política de privacidad son enlaces vacíos] -->
 
-						<div><input type="checkbox" name="politica-privacidad"><label for="politica-privacidad">He leído y acepto la política de privacidad</label></div>
+						<div><input type="checkbox" id="politica-privacidad" required name="politica-privacidad"><label for="politica-privacidad">He leído y acepto la política de privacidad</label></div>
 
-						<div><a href="" class="" ><input type="button" name="inicia-sesion" value="REGISTRARSE" class="boton"></a></div>
+						<div><input type="submit" name="inicia-sesion" value="REGISTRARSE" class="boton"></div>
 
 					</fieldset>
 				</form>
-
-
 
 			</div>
 
@@ -183,19 +181,19 @@ Asignatura HTML y CSS
 	
 	<footer>
 		
-		<div class="wrapper">
-			 <div>Sobre nosotros . Aviso Legal . Política de privacidad</div>
-		     <div>Facebook . Twitter . Youtube</div>
-		</div>
+		
+		 <ul><li><a href="">Sobre nosotros</a><span> · </span></li><li><a href="">Aviso Legal</a><span> · </span></li><li><a href="">Política de privacidad</a></li></ul>
+	     <ul><li><a href="">Facebook</a><span> · </span></li><li><a href="">Twitter</a><span> · </span></li><li><a href="">Youtube</a></li></ul>
 
+         <ul>
+			
+			<li> &copy; 2020 Oscar del Aguila Giménez</li>
+			<li><a href="https://www.flaticon.com" target="_blank">Iconos flaticon.com</a></li>
+			<li><a href="https://unsplash.com" target="_blank">Imágenes unsplash.com</a></li>
 
-		<div>
-			<p>2020 &copy; Oscar del Aguila Giménez</p>
-			<p>Iconos flaticon.com</p>
-			<p>Imágenes unsplash.com</p>
-		</div>
+		 </ul>
 
-		<a href="#cabecera"><div class="desplazador-arriba">&xwedge;</div></a>
+		 <a href="#cabecera"><div class="desplazador-arriba">&xwedge;</div></a>
 
 	</footer>	
 
@@ -203,5 +201,3 @@ Asignatura HTML y CSS
 
 </body>
 </html>
-
-
