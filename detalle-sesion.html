@@ -1,6 +1,8 @@
 
 
 
+
+
 <!DOCTYPE html>
 <html lang="es-ES">
 <head>
@@ -10,6 +12,15 @@
 	<meta name="author" content="Oscar del Aguila">
 
 
+	<!--
+		Esta metaetiqueta informa a los navegadores de los dispositivos móviles que deben establecer el ancho de la ventana gráfica 
+		al ancho del dispositivo y escalar el documento al 100% de ese tamaño, de modo que el documento se mostrará al tamaño optimizado para 
+		esos dispositivos móviles.
+		¿Por qué esto es necesario? Porque los navegadores de los dispositivos móviles tienden a mentir sobre el ancho de su ventana gráfica.
+	-->
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
@@ -17,7 +28,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 		
 
-	<title></title>
+	<title>Sesión Klaus</title>
 
 
 
@@ -26,18 +37,17 @@
 <body>
 	
 
-	<header>
+	<header id="cabecera">
 			
 				<div>
-					
 					<div>
 						<a href="index.html">
 						<img src="img/oscarsclub-isologo.png" class="logo-oscars-club" alt="Logo Oscars Club">
 						</a>
 					</div>
 					<div><a href="index.html"><b>oscars</b><i>club</i></a></div>
-					
 				</div>
+
 				<nav>
 					<ul>                                       
 						<li><a href="clubes-tematicos.html" >CLUBES TEMÁTICOS</a></li>
@@ -46,7 +56,7 @@
 				</nav>
 
 				<div>
-					<a href=""  ><input type="button" name="inicia-sesion" value="Iniciar Sesión" class="boton"></a>
+					<input type="button" name="inicia-sesion" value="Iniciar Sesión" class="boton">
 				</div>
 				
 
@@ -60,13 +70,13 @@
 		<ul class="breadcrumb">
 		  <li><a href="index.html">Inicio</a></li>
 		  <li><a href="sesiones-2020.html">Sesiones 2020</a></li>
-		  <li><a href="#">Klaus</a></li>
+		  <li value="100">Klaus</li>
 		</ul>
 
 
 		<h1>Klaus</h1>
 
-		<section class="wrapper-detalle">
+		<article class="wrapper-detalle">
 				<aside>
 						
 						<h1>Ficha técnica</h1>
@@ -112,7 +122,7 @@
 
 				</aside>
 
-				<article>
+				<section>
 
 					<h1>Sobre la obra</h1>
 
@@ -132,31 +142,34 @@
 				    <h1>Trailer</h1>
 
 				    <div class="trailer-pelicula">
-				    	<iframe src="https://www.youtube.com/embed/taE3PwurhYM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				    	<iframe src="https://www.youtube.com/embed/taE3PwurhYM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
 				    </div>
 
 				    <div><p><i>KLAUS</i></p><span> | </span><p><i>OFFICIAL TRAILER</i></p><span> | </span><p><i>NETFLIX</i></p></div>
 
-				</article>    
-		</section>
+				</section>    
+		</article>
 
     </main>
 
 	<footer>
 		
-		<div class="wrapper">
-			 <div>Sobre nosotros . Aviso Legal . Política de privacidad</div>
-		     <div>Facebook . Twitter . Youtube</div>
-		</div>
+		
+		 <ul><li><a href="">Sobre nosotros</a><span> · </span></li><li><a href="">Aviso Legal</a><span> · </span></li><li><a href="">Política de privacidad</a></li></ul>
+	     <ul><li><a href="">Facebook</a><span> · </span></li><li><a href="">Twitter</a><span> · </span></li><li><a href="">Youtube</a></li></ul>
 
+         <ul>
+			
+			<li> &copy; 2020 Oscar del Aguila Giménez</li>
+			<li><a href="https://www.flaticon.com" target="_blank">Iconos flaticon.com</a></li>
+			<li><a href="https://unsplash.com" target="_blank">Imágenes unsplash.com</a></li>
 
-		<div>
-			<p>2020 &copy; Oscar del Aguila Giménez</p>
-			<p>Iconos flaticon.com</p>
-			<p>Imágenes unsplash.com</p>
-		</div>
+		 </ul>
+
+		 <a href="#cabecera"><div class="desplazador-arriba">&xwedge;</div></a>
 
 	</footer>	
+
 
 </body>
 </html>
